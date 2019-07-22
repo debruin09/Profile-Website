@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Notable|Righteous&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
     <title>St.Klue</title>
+
 
 </head>
 
@@ -31,7 +34,7 @@
             <div class="bottom-side">
                 <div class="link-bottom">
                     <div id="nav-links">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                         <a class="nav-link" href="about-me.html">About Me</a>
                         <a class="nav-link" href="projects.html">Projects</a>
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -41,30 +44,27 @@
         </div>
 
 
-        <!---Form Section-->
-        <div class="form-container">
+        <!--About Me Section-->
+        <div class="about-me-card">
 
-            <div class="contact-me">
-                <h2>Contact Me</h2>
+            <!--Image container-->
+            <div class="about-me-image-wrapper">
+                <img id="p-im-2" src="../images/1.jpeg" alt="profile image">
             </div>
 
-            <div class="form-wrapper">
-                <form>
-                    <div class="form-items">
-                        <div class="form-item"><input id="subject" type="text" name="subject" placeholder="Subject">
-                        </div>
-                        <div class="form-item"><input id="email" type="email" name="email" placeholder="Email"></div>
-                        <div class="form-item"><textarea name="message" id="text" cols="30" rows="10"
-                                placeholder="Enter your message here" style="padding-left: 10px;"></textarea></div>
-                        <div class="form-item"><button class="btn" type="submit" id="btn-submt">Submit</button></div>
-                    </div>
-                </form>
+            <!--About Me text-->
+            <div class="description-wrapper">
+                <p>Hi, I'm St.Klue de Bruin. I'm in pursue of becoming a Machine Learning 
+                   Engineer. Currently i'm an intern at Younglings Africa to develope my skills
+                   and also gaining new skills. I want to learn to use machine learning 
+                   with mobile technologies. 
+                </p>
             </div>
         </div>
 
-        <!--Footer Section-->
+
         <footer>
-            <div class="social-media-icons-wrapper" style="margin-top: 100px;">
+            <div class="social-media-icons-wrapper">
                 <div class="social-media-icons">
                     <h4 class="text-2">Follow me here: </h4>
                     <a href="#">
@@ -82,41 +82,29 @@
 
     </div>
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $("form").on("submit", e => {
-            e.preventDefault();
-
-            const email = $("#email")
-                .val()
-                .trim();
-            const subject = $("#subject")
-                .val()
-                .trim();
-            const text = $("#text")
-                .val()
-                .trim();
-
-            const data = {
-                email,
-                subject,
-                text
-            };
-
-            $.post("/email", data)
-                .then(() => {
-                    window.location.href = "/email/sent";
-                })
-                .catch(() => {
-                    window.location.href = "/error";
-                });
-        });
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB_FGLrYcB1n7XOdNkqxKfBBE6TErGPVUw",
+            authDomain: "my-profile-6a2db.firebaseapp.com",
+            databaseURL: "https://my-profile-6a2db.firebaseio.com",
+            projectId: "my-profile-6a2db",
+            storageBucket: "",
+            messagingSenderId: "763112332439",
+            appId: "1:763112332439:web:a5211253ecf7d097"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
     </script>
 
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <script src="scripts/scripts.js"></script>
+    
+    <script src="../scripts/scripts.js"></script>
 </body>
 
 </html>
