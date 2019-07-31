@@ -1,0 +1,122 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Notable|Righteous&display=swap" rel="stylesheet">
+    <title>St.Klue</title>
+
+</head>
+
+<body id="contact-body">
+
+    <div class="container">
+
+        <!---Navigation-->
+        <div class="nav-container">
+            <div class="top-side">
+
+                <div class="bar-top">
+                    <button id="icon-click" style="background: none; border:none">
+                        <ion-icon class="icon" name="menu"></ion-icon>
+                    </button>
+                </div>
+
+                <div class="name-text">
+                    <h1 class="header-text">ST.KLUE</h1>
+                </div>
+
+            </div>
+
+            <div class="bottom-side">
+                <div id="nav-links">
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="about-me.html">About Me</a>
+                    <a class="nav-link" href="projects.html">Projects</a>
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+        <!--End Navigation-->
+
+
+        <!---Form Section-->
+
+        <div class="contact-me-wrapper">
+
+            <div class="contact-me">
+                <h2>Contact Me</h2>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="robot-im-wrapper">
+                <img src="images/robot.png" alt="robot-image" id="hide-me">
+            </div>
+
+            <div class="form-wrapper">
+                <form id="contactForm">
+                    <div class="form-items">
+                        <div class="form-item"><input id="name" type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-item"><input id="email" type="email" name="email" placeholder="Email"></div>
+                        <div class="form-item"><textarea name="message" id="message" cols="30" rows="10"
+                                placeholder="Enter your message here" style="padding-left: 10px;"></textarea></div>
+
+                        <div class="g-recaptcha" data-sitekey="6Ld-ArAUAAAAAJU2HqFDC71qbz8_PWWAUVPNSd7_"
+                            data-callback="dataCallback" data-expired-callback="dataExpiredCallback" data-theme='dark'>
+                        </div>
+                        <br />
+                        <div class="g-recaptcha-error"></div>
+
+                        <div class="form-item"><button class="btn" type="submit" id="btn-submit"
+                                disabled>Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer Section-->
+        <footer class="footer-container">
+            <div class="footer-wrapper">
+                <a href="#">
+                    <ion-icon class="social-media-icon" name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon class="social-media-icon" name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon class="social-media-icon" name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <script type="text/javascript">
+        function dataCallback(response) {
+            console.log("dataCallback", response)
+            var submitBtn = document.querySelector('#btn-submit');
+            submitBtn.removeAttribute('disabled');
+            submitBtn.style.cursor = 'pointer';
+        }
+        function dataExpiredCallback() {
+            console.log("dataExpiredCallback")
+        }
+    </script>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+</body>
+
+</html>

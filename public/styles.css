@@ -1,0 +1,603 @@
+*{ 
+    padding: 0;
+    margin: 0;
+    font-family: Indie Flower;
+    color: rgba(243, 188, 7, 0.829);
+}
+
+body{
+    background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.7), rgba(2, 2, 5, 0.7)),url('images/back-im3.jpg');    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+.icon{
+    display: none;
+}
+
+/* Navigation Section*/
+.container{
+    position: relative;
+    min-height: 100vh;
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-text{
+    margin: auto;
+}
+/* Hamburger Icon */
+.icon{
+    font-size: 40px;
+}
+
+.icon:hover{
+    color: #1E90FF;
+}
+
+
+.header-text{
+    font-family: Righteous;
+    letter-spacing: 12px;
+    font-size: 80px;
+    color: hsl(216, 21%, 91%);
+    align-self: center;
+}
+
+.top-side{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-side{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+#nav-links{
+    display: flex;
+    width:50%;
+    justify-content: space-evenly;
+}
+
+
+.nav-link {
+    font-family: Righteous;
+    text-decoration-line: none;
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 40px;
+    width: 100%;
+    color: white;
+}
+
+.nav-link:hover{
+    color: #1E90FF;
+}
+
+/* Footer Section */
+
+.footer-container{
+    height: 2.5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    background: rgba(8, 8, 8, 0.6);
+    margin-top: 20px;
+    
+}
+
+.social-media-icon{
+    font-size: 90px;
+    color:white;
+}
+
+
+/* ========================= Home Page =================================*/
+
+/* Middle Section  */
+
+.top-right-side{
+    display: flex;
+    justify-content: space-between;
+}
+
+.index-nav-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.center-wrapper{
+    display: flex;
+    width: 100%;
+}
+.center-header-text{
+    font-family: Righteous;
+    letter-spacing: 12px;
+    font-size: 80px;
+    color: hsl(216, 21%, 91%);
+    margin: auto;
+}
+
+.home-im-wrapper{
+    flex:3;
+}
+.profile-card{
+    display: flex;
+    flex:2;
+    margin-top: 20px;
+    padding-bottom: 2.5rem;
+    width: 100%;
+}
+
+
+.description{
+    background: rgba(8, 8, 8, 0.6);
+    width: 60%;
+
+}
+
+.descrip-text{
+    font-size: 25px;
+    padding-left: 20px;
+}
+
+
+
+/* ========================= About - Me  Page =================================*/
+
+
+.about-me-card{
+    padding-top:2rem;
+    display: flex;
+    padding-bottom: 2.5rem;
+    justify-content: space-evenly;
+}
+
+.about-me-image-wrapper{
+    width: 100%;
+    align-self: flex-start;
+    align-self: center;
+}
+
+#p-im{
+    width: 600px;
+    height: 600px;
+}
+
+.about-me-left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border:1px white solid;
+    background:rgba(8, 8, 8, 0.6);
+}
+
+.description-wrapper{
+    width: 100%;
+    
+}
+
+.description-wrapper p{
+   padding: 10px;
+   font-size: 20px;
+   font-family: Calibri;
+}
+
+.experience-wrapper{
+    display: flex;
+    flex-direction: column;
+    background: rgba(8, 8, 8, 0.6);
+    width: 100%;
+}
+
+.logos-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+    background: rgba(3, 3, 3, 0.7);
+}
+.logos-frame{
+    width: 150px;
+    height:100px;
+}
+
+.experience-descrip{
+    margin-top: 20px;
+    width: 60%;
+    align-self: center;
+    padding-bottom: 4rem;
+    font-size: 30px;
+}
+
+/* ========================= Projects Page =================================*/
+
+.projects-container{
+    margin-top: 20px;
+    padding-bottom: 25rem;
+}
+
+.project-header{
+    width: 15rem;
+    margin: auto;
+}
+
+.project-header h2{
+    letter-spacing: 3px;
+    font-family: Righteous;
+    border-radius: 30px;
+    padding-left: 35px;
+    padding-bottom: 10px;
+    color:white;
+    padding-top: 10px;
+    border:4px #1E90FF solid;
+}
+
+.project-text{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.project-text h4, small{
+    font-size: 30px;
+    margin: auto;
+
+}
+
+small{
+    font-size: 18px;
+}
+
+.projects-icons{
+    font-size: 120px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.projects-icon{
+    color: #1E90FF;
+    margin: auto;
+}
+
+.projects-icon:hover{
+    color:white;
+    font-size: 150px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30px;
+    height: 70%;
+    padding: 20px;
+}
+
+.grid-item{
+    width: 90%;
+    height:60%;
+    border:4px #1E90FF solid;
+    background:rgba(8, 8, 8, 0.6); 
+    padding-bottom: 2.5rem; 
+}
+
+.py-icon-item{
+     font-size: 40px;
+     color:white;
+}
+
+.py-icon-item:hover{
+    color: #f5f542;
+    cursor: pointer;
+}
+
+/* ========================= Contact Page =================================*/
+
+.form-container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 2.5rem;
+}
+.contact-me-wrapper{
+    display: flex;
+}
+.contact-me{
+    margin: auto;
+}
+
+.contact-me h2{
+    font-family: Righteous;
+    font-size: 30px;
+    color:#1E90FF;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.robot-im-wrapper.robot-im{
+    width: 20%;
+}
+
+.form-wrapper{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 12.5rem;
+    background: rgba(8, 8, 8, 0.8);
+}
+
+.form-items{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    padding:30px;
+    width: 80%;
+}
+
+.form-item{
+    padding: 20px;
+}
+
+input{
+    color:white;
+    width: 90%;
+    font-weight: 800;
+}
+
+.form-item input{
+    font-family: calibri;
+    font-size: 20px;
+    background: none;
+    border:none;
+    border-bottom: 3px #1E90FF solid;
+    padding-bottom:10px;
+    outline: none;  
+
+}
+
+.form-item textarea{
+    font-family: calibri;
+    font-size: 20px;
+    width: 100%;
+    color:white;
+    background: none;
+    outline: none;
+    border:3px #1E90FF solid;
+}
+
+.btn{
+    width: 100%;
+    background: none;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    border-radius: 20px;
+    border:3px #1E90FF solid;
+}
+
+
+.btn:hover{
+    color:none;
+    background:#1E90FF;
+}
+
+#btn-submit{
+    cursor: not-allowed;
+}
+
+/*google recaptcha*/
+.g-recaptcha{
+     margin-left: 0 auto;
+     width: 80%;
+}
+
+/*  ================================  Media Queries ================================ */
+
+/* ======== Mobile View ========== */
+@media only screen and (max-width:500px){
+
+    body{
+        background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.7), rgba(2, 2, 5, 0.7)),url('images/mobile-back.jpg');    
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    
+    }    
+
+    .icon{
+        display: block;
+    }
+
+    #nav-links{
+        flex-direction: column;
+        display: none;
+        
+    }
+    .header-text{
+        font-size: 20px;
+    }
+
+    .center-header-text{
+        font-size: 30px;
+    }
+
+    .home-im{
+        width: 250px;
+        height:470px;
+    }
+    .top-right-side{
+        display: flex;
+        width: 60%;
+    }
+
+    .nav-link{
+        display: flex;
+        font-size:20px;
+        width: 100%;
+        
+    }
+
+    .nav-link a{
+        color:#1E90FF;
+    }
+
+    /* Footer */
+    .social-media-icon{
+        color: #1E90FF;
+        font-size: 40px;
+    }
+
+    /* === Home Page === */
+
+    .center-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .description{
+        width: 100%;
+    }
+
+    #p-im{
+        width: 100%;
+        height: 60%;
+    }
+
+    .descrip-text{
+        font-size:20px;
+        
+    }
+    /* === About Me Page === */
+    .about-me-card{
+        flex-direction: column;
+    }
+    #p-im-2{
+        width: 100%;
+        height: 50%;
+    }
+    .logos-frame{
+        padding-top: 10px;
+        width: 60px;
+        height:40px;
+    }
+
+    .experience-descrip{
+        font-size: 20px;
+    }
+    
+    
+    /* === Projects Page === */
+    .grid-container{
+       display: flex;
+       flex-direction: column;
+
+    }
+
+    .grid-item{
+        margin-bottom: 20px;
+    }
+
+    .project-header{
+        width: 50%;
+
+    }
+    
+    .project-header h2{
+        letter-spacing: 2px;
+        font-size: 15px;
+        padding-bottom: 5px;
+        color:white;
+        padding-top: 5px;
+        border:4px #1E90FF solid;
+    }
+    
+    .project-text h4{
+        font-size: 20px;
+    }
+    
+    small{
+        font-size: 15px;
+    }
+    
+    .projects-icons{
+        font-size: 80px;
+
+    }
+    
+    .projects-icon:hover{
+        color:white;
+        font-size: 90px;
+    }
+    
+    .py-icon-item{
+         font-size: 20px;
+    }
+
+    /* ======= Contact Page ====== */
+    #hide-me{
+        display: none;
+    }
+    .form-wrapper{
+        width: 100%;
+        border:none;
+        background: linear-gradient(to bottom, rgba(30, 30, 32, 0.8), rgba(32, 32, 34, 0.9));
+    }
+    .form-item input, .form-item textarea{
+        border-color:#1E90FF;
+    }
+
+    .btn{
+        border:3px #1E90FF solid;
+    }
+}
+
+/* Tablet View */
+@media screen and (max-width:1011px){
+    
+    .project-text h4{
+        font-size: 21px;
+    }
+
+    #hide-me{
+        display: none;
+    }
+
+    .nav-link{
+        margin:30px;
+        font-size: 20px;
+    }
+    
+    small{
+        font-size: 17px;
+    }
+    
+    .projects-icons{
+        font-size: 70px;
+    }
+    
+    .grid-item{
+        height:50%;
+    }
+
+    .social-media-icon{
+        font-size: 60px;
+    }
+}
+
